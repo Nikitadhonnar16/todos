@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 const EditTodo = () => {
 const [formData, setFormData]=useState({})
 
-     const todos = useSelector((state) => state.app.todos[0])
+     const todos = useSelector((state) => state.app.todos)
   console.log("edittodos", todos);
   
 //   useEffect(() =>
@@ -77,7 +77,7 @@ const dispatch = useDispatch();
       <input type="text" onChange={handleChange}  id="flag" class="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
               </div>
               
-<button onClick={HadleSubmit} type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Add Todo</button>
+<button onClick={HadleSubmit} type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Edit Todo</button>
 </form>
 
     </div>
