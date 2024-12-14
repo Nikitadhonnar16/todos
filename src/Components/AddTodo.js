@@ -38,7 +38,7 @@ const [formData, setFormData]=useState({})
       <input type="text" onChange={handleChange} id="id" class="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
   </div>
               <div className='mt-7'>
-      <label for="small-input" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Input :</label>
+      <label for="small-input" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Title :</label>
       <input type="text" onChange={handleChange} id="input" class="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
   </div>
   <div class="mb-5">
