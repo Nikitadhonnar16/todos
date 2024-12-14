@@ -17,7 +17,7 @@ const TodoList = () => {
     const todaysTodos = todos.filter((todo) => todo.date === today && !isCompleted(todo))
                                .sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
 
-    // Filter past incomplete tasks (tasks that are past due and not completed)
+    // Filter past incomplete tasks
     const pastIncompleteTodos = todos.filter((todo) => todo.date < today && !isCompleted(todo))
                                       .sort((a, b) => new Date(b.date) - new Date(a.date) || priorityOrder[a.priority] - priorityOrder[b.priority]);
 
@@ -72,7 +72,7 @@ const TodoList = () => {
                                 <td className="px-6 py-4">{cur.discription}</td>
                                 <td className="px-6 py-4">{cur.date}</td>
                                 <td className="px-6 py-4">{cur.Priority}</td>
-                                <td className="px-6 py-4">{cur.tags}</td> {/* Added Tags */}
+                                <td className="px-6 py-4">{cur.tags}</td> 
                                 <td className="px-6 py-4">{cur.flag}</td>
                                 <td className="px-6 py-4 text-right">
                                     <Link to={`/edittodo/${cur.id}`} onClick={() => handleEdit(cur.id)} className="font-medium text-blue-600 hover:underline">Edit</Link>
@@ -99,7 +99,7 @@ const TodoList = () => {
                             <th scope="col" className="px-6 py-3">Description</th>
                             <th scope="col" className="px-6 py-3">Due Date</th>
                             <th scope="col" className="px-6 py-3">Priority</th>
-                            <th scope="col" className="px-6 py-3">Tags</th> {/* Added Tags */}
+                            <th scope="col" className="px-6 py-3">Tags</th> 
                             <th scope="col" className="px-6 py-3">Completed Flag</th>
                             <th scope="col" className="px-6 py-3">Edit</th>
                             <th scope="col" className="px-6 py-3">Delete</th>
@@ -113,7 +113,7 @@ const TodoList = () => {
                                 <td className="px-6 py-4">{cur.discription}</td>
                                 <td className="px-6 py-4">{cur.date}</td>
                                 <td className="px-6 py-4">{cur.Priority}</td>
-                                <td className="px-6 py-4">{cur.tags}</td> {/* Added Tags */}
+                                <td className="px-6 py-4">{cur.tags}</td>
                                 <td className="px-6 py-4">{cur.flag}</td>
                                 <td className="px-6 py-4 text-right">
                                     <Link to={`/edittodo/${cur.id}`} onClick={() => handleEdit(cur.id)} className="font-medium text-blue-600 hover:underline">Edit</Link>
@@ -140,7 +140,7 @@ const TodoList = () => {
                             <th scope="col" className="px-6 py-3">Description</th>
                             <th scope="col" className="px-6 py-3">Due Date</th>
                             <th scope="col" className="px-6 py-3">Priority</th>
-                            <th scope="col" className="px-6 py-3">Tags</th> {/* Added Tags */}
+                            <th scope="col" className="px-6 py-3">Tags</th> 
                             <th scope="col" className="px-6 py-3">Completed Flag</th>
                             <th scope="col" className="px-6 py-3">Edit</th>
                             <th scope="col" className="px-6 py-3">Delete</th>
@@ -154,7 +154,7 @@ const TodoList = () => {
                                 <td className="px-6 py-4">{cur.discription}</td>
                                 <td className="px-6 py-4">{cur.date}</td>
                                 <td className="px-6 py-4">{cur.Priority}</td>
-                                <td className="px-6 py-4">{cur.tags}</td> {/* Added Tags */}
+                                <td className="px-6 py-4">{cur.tags}</td> 
                                 <td className="px-6 py-4">{cur.flag}</td>
                                 <td className="px-6 py-4 text-right">
                                     <Link to={`/edittodo/${cur.id}`} onClick={() => handleEdit(cur.id)} className="font-medium text-blue-600 hover:underline">Edit</Link>

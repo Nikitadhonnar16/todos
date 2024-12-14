@@ -11,6 +11,8 @@ const EditTodo = () => {
   const { id } = useParams();
   const todos = useSelector((state) => state.app.todos);
   
+
+  //getting perticular data with id
   useEffect(() => {
     const filterData = todos.filter((cur) => cur.id === id);
     if (filterData.length > 0) {
@@ -30,6 +32,7 @@ const EditTodo = () => {
   };
 
   const handleSubmit = () => {
+
     const updatedTodo = {
       input: singleEditData.input,
       discription: singleEditData.discription,
