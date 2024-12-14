@@ -30,7 +30,6 @@ const EditTodo = () => {
   };
 
   const handleSubmit = () => {
-    // Prepare the updated todo object
     const updatedTodo = {
       input: singleEditData.input,
       discription: singleEditData.discription,
@@ -40,7 +39,6 @@ const EditTodo = () => {
       flag: singleEditData.flag,
     };
 
-    // Dispatch the action to update the todo
     dispatch(EditTodos({ id: singleEditData.id, updatedTodo }));
     navigate('/');
   };
@@ -48,37 +46,37 @@ const EditTodo = () => {
   return (
     <div>
       <form className="max-w-sm mx-auto">
-        <h5>Edit To Do</h5>
+        <h5 className="text-[30px] text-teal-600 font-bold">Edit To Do</h5>
 
         <div className="mt-7">
           <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            SLno
+            SLNo
           </label>
           <input
             value={singleEditData.id}
             type="text"
             onChange={handleChange}
             id="id"
-            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
 
         <div className="mt-7">
           <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            Input :
+            Input:
           </label>
           <input
             type="text"
             value={singleEditData.input}
             onChange={handleChange}
             id="input"
-            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-5">
+        <div className="mt-4">
           <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            Description :
+            Description:
           </label>
           <input
             type="text"
@@ -89,22 +87,22 @@ const EditTodo = () => {
           />
         </div>
 
-        <div className="">
+        <div className="mt-4">
           <label className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            Due Date :
+            Due Date:
           </label>
           <input
             type="date"
             id="date"
             value={singleEditData.date}
             onChange={handleChange}
-            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full p-2 text-black-900 border border-black-300 rounded-lg bg-black-50 text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-black-700 dark:border-black-600 dark:placeholder-black-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
 
-        <div className="mb-5">
+        <div className="mt-4">
           <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            Tags :
+            Tags:
           </label>
           <input
             type="text"
@@ -115,7 +113,7 @@ const EditTodo = () => {
           />
         </div>
 
-        <div className="mb-5">
+        <div className="mt-4">
           <label className="block mb-2 text-sm font-medium text-white-900 dark:text-gray">
             Priority
           </label>
@@ -132,9 +130,9 @@ const EditTodo = () => {
           </select>
         </div>
 
-        <div className="mb-5">
+        <div className="mt-4">
           <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-black-900 dark:text-black">
-            Completed Flag :
+            Completed Flag:
           </label>
           <input
             type="text"
@@ -148,7 +146,7 @@ const EditTodo = () => {
         <button
           onClick={handleSubmit}
           type="button"
-          className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+          className="focus:outline-none mt-6 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
         >
           Edit Todo
         </button>
